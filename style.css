@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --primary-400: hsl(25, 97%, 53%);
+  --accent-400: hsl(215, 27%, 12%);
+  --accent-700: hsl(216, 12%, 8%);
+  --gray-100: hsl(0, 0%, 100%);
+  --gray-400: hsl(217, 12%, 63%);
+  --gray-500: hsl(216, 12%, 54%);
+  --gray-600: hsl(217, 21%, 19%);
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --font-400: 1rem;
+  --font-500: 1.25rem;
+  --font-700: 1.5rem
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  font-weight: var(--weight-regular);
+  min-height: 100vh;
+  background-color: var(--accent-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* COMPONENTS */
+.container {
+  background-color: var(--accent-400);
+  width: 90%;
+  max-width: 290px;
+  border-radius: 1rem;
+  padding: 1.5em;
+}
+
+.icon-container {
+  background-color: var(--gray-600);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 12px;
+}
+
+.title {
+  font-size: var(--font-700);
+  color: var(--gray-100);
+  margin: .5em 0 .25em;
+}
+
+.text {
+  margin: 0;
+  color: var(--gray-400);
+  font-size: .75rem;
+}
+
+.rating-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1em;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--gray-600);
+  border: none;
+  color: var(--gray-400);
+  font-family: inherit;
+  transition: all .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+.btn:active,
+.btn-active {
+  background-color: var(--primary-400);
+  color: var(--gray-100);
+}
+
+.btn-submit {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5em;
+  background-color: var(--primary-400);
+  border: none;
+  color: var(--gray-100);
+  border-radius: 100px;
+  height: 2.5rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--weight-bold);
+  letter-spacing: 2px;
+  transition: all .2s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--gray-100);
+  color: var(--primary-400);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 290px) {
+  .btn {
+    width: 24px;
+    height: 24px;
+    font-size: .625rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    width: 50%;
+    max-width: 400px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.125rem;
+  }
+}
+
+
+@media screen and (min-width: 900px) {
+  .container {
+    width: 50%;
+    max-width: 500px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.25rem;
+  }
+
+  .btn-submit {
+    font-size: 1.25rem;
+    height: 3.5rem;
+  }
+}
