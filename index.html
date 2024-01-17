@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a challenge from Frontend Mentor to build an interactive rating component" />
+    <meta name="keywords" content="Rating, Interactive, Component" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <main class="container">
+    <div class="container" id="rating-container">
       <div class="icon-container">
         <img src="./images/icon-star.svg" alt="star icon" class="icon" />
       </div>
 
-      <h1 class="title">How did we do?</h1>
+      <h2 class="title">How did we do?</h2>
       <p class="text">
         Please let us know how we did with your support request. All feedback is appreciated to help
         us improve our offering!
@@ -28,6 +32,24 @@
       </ul>
 
       <button class="btn-submit">Submit</button>
-    </main>
+    </div>
+    <div class="container center hidden" id="thanks-container">
+      <img
+        src="./images/illustration-thank-you.svg"
+        alt="illustration-thank-you"
+        class="illustration" />
+      <p class="summary">
+        You selected&nbsp;
+        <span id="rating"></span>
+        &nbsp;out of 5
+      </p>
+      <h2 class="title">Thank you!</h2>
+      <p class="text thank">
+        We appreciate you taking the time to give a rating. If you ever need more support, don't
+        hesitate to get in touch!
+      </p>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

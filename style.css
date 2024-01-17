@@ -41,7 +41,7 @@ body {
   width: 90%;
   max-width: 290px;
   border-radius: 1rem;
-  padding: 1.5em;
+  padding: 1.75em;
 }
 
 .icon-container {
@@ -68,6 +68,11 @@ body {
   margin: 0;
   color: var(--gray-400);
   font-size: .75rem;
+  line-height: 1.5;
+}
+
+.text.thank {
+  padding: 0 1em;
 }
 
 .rating-container {
@@ -93,14 +98,14 @@ body {
   justify-content: center;
 }
 
-.btn:hover {
+.btn:not(.active):hover {
   background-color: var(--gray-500);
   color: var(--gray-100);
   cursor: pointer;
 }
 
 .btn:active,
-.btn-active {
+.active {
   background-color: var(--primary-400);
   color: var(--gray-100);
 }
@@ -130,6 +135,33 @@ body {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.illustration {
+  margin-top: 1.5em;
+}
+
+.summary {
+  background-color: var(--gray-600);
+  color: var(--primary-400);
+  border-radius: 100px;
+  width: max-content;
+  padding: 1.25em;
+  word-wrap: wrap;
+  height: 2rem;
+  margin: 1.5em auto 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
 @media screen and (max-width: 290px) {
   .btn {
     width: 24px;
@@ -156,6 +188,12 @@ body {
     width: 48px;
     height: 48px;
     font-size: 1.125rem;
+  }
+
+  .summary {
+    padding: 1em 1.5em;
+    height: 2.5rem;
+    font-size: 1.25rem;
   }
 }
 
